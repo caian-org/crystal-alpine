@@ -1,0 +1,30 @@
+sudo: required
+language: generic
+
+services:
+  - docker
+
+stages:
+  - build
+  - publish
+
+jobs:
+  include:
+    - stage: build
+      name: "Build and check the image"
+      script:
+        - docker build -t crystal:latest .
+        - docker run crystal:latest crystal -v
+      if: branch IS master
+
+    - stage: publish
+      name: "Publish the image to DockerHub"
+      script:
+        - docker build -t "$DH_REPO":"$DOCKER_TAG" .
+        - docker push "$DH_REPO":"$DOCKER_TAG"
+        - docker tag "$DH_REPO":"$DOCKER_TAG" "$DH_REPO":latest
+        - docker push "$DH_REPO":latest
+      env:
+        - DOCKER_REPO="caian/crystal"
+        - DOCKER_TAG="${TRAVIS_TAG}-alpine"
+      if: tag IS present
