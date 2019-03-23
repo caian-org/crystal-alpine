@@ -15,7 +15,7 @@ jobs:
       script:
         - docker build -t crystal:latest .
         - docker run crystal:latest crystal -v
-      if: branch IS master
+      if: branch = master
 
     - stage: publish
       name: "Publish the image to DockerHub"
