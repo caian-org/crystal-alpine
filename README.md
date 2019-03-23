@@ -12,14 +12,13 @@ development headers on top of Alpine Linux.
     - _GNU C_
     - _ZLib_
     - _OpenSSL_
-    - _ReadLine_ <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="img" height="190px" align="right"/>
+    - _ReadLine_ <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="img" height="150" align="right"/>
     - _GNU GMP_
     - _YAML_
     - _XML_
 - __Crystal compiler__ (version `0.27.2`)
 - __Shards__ (version `0.8.1`)
 
----
 
 ## Rationale
 
@@ -67,6 +66,7 @@ ENTRYPOINT ["/app"]
 
 [tag-shield]: https://img.shields.io/github/tag/caian-org/crystal-alpine.svg?style=for-the-badge
 [tag-url]: https://github.com/caian-org/crystal-alpine/releases
+
 
 ## License
 
