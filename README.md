@@ -12,7 +12,7 @@ development headers on top of Alpine Linux.
     - _GNU C_
     - _ZLib_
     - _OpenSSL_
-    - _ReadLine_ <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="img" height="150" align="right"/>
+    - _ReadLine_ <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="img" height="140px" align="right"/>
     - _GNU GMP_
     - _YAML_
     - _XML_
@@ -23,7 +23,7 @@ development headers on top of Alpine Linux.
 ## Rationale
 
 The Crystal programming language already have an official Docker image at
-[`crystallang/crystal`][crystal-docker-url] -- the image being based on Ubuntu
+[`crystallang/crystal`][crystal-docker-url] --- the image being based on Ubuntu
 16.04. The [Static Linking][crystal-static-linking] feature, however, is
 currently only supported on Alpine Linux. This image brings the Crystal
 compiler and other stuff to Alpine, so you can make static-linked binaries.
@@ -31,19 +31,19 @@ compiler and other stuff to Alpine, so you can make static-linked binaries.
 
 ## Usage
 
-You can build yourself:
+- __You can build yourself:__
 
 ```shell
-$ docker build -t crystal .
+docker build -t crystal .
 ```
 
-Or pull from DockerHub:
+- __Or pull from DockerHub:__
 
 ```shell
-$ docker pull caian/crystal:0.27.2-alpine
+docker pull caian/crystal:0.27.2-alpine
 ```
 
-Use to build very minimal Docker images of Crystal applications:
+- __Use to build very minimal Docker images of Crystal applications:__
 
 ```Dockerfile
 FROM caian/crystal:0.27.2-alpine AS build
