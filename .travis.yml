@@ -19,6 +19,8 @@ jobs:
 
     - stage: publish
       name: "Publish the image to DockerHub"
+      before_script:
+        - echo "$DH_PASS" | docker login -u caian --password-stdin
       script:
         - docker build -t "$DH_REPO":"$DOCKER_TAG" .
         - docker push "$DH_REPO":"$DOCKER_TAG"
