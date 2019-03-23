@@ -20,13 +20,14 @@ jobs:
     - stage: publish
       name: "Publish the image to DockerHub"
       before_script:
-        - echo "$DH_PASS" | docker login -u caian --password-stdin
+        - echo "$DOCKERHUB_PASSW" | docker login -u caian --password-stdin
       script:
-        - docker build -t "$DH_REPO":"$DOCKER_TAG" .
-        - docker push "$DH_REPO":"$DOCKER_TAG"
-        - docker tag "$DH_REPO":"$DOCKER_TAG" "$DH_REPO":latest
-        - docker push "$DH_REPO":latest
+        - docker build -t "$DOCKER_IMG" .
+        - docker push "$DOCKER_IMG"
+        - docker tag "$DOCKER_IMG" "$DOCKER_LATEST"
+        - docker push "$DOCKER_LATEST"
       env:
         - DOCKER_REPO="caian/crystal"
-        - DOCKER_TAG="${TRAVIS_TAG}-alpine"
+        - DOCKER_IMG="${DOCKER_REPO}:${TRAVIS_TAG}-alpine"
+        - DOCKER_LATEST="${DOCKER_REPO}:latest"
       if: tag IS present
