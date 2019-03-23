@@ -12,7 +12,7 @@ development headers on top of Alpine Linux.
     - _GNU C_
     - _ZLib_
     - _OpenSSL_
-    - _ReadLine_ <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="img" height="213px" align="right"/>
+    - _ReadLine_ <img src="https://cdn.worldvectorlogo.com/logos/docker.svg" alt="img" height="190px" align="right"/>
     - _GNU GMP_
     - _YAML_
     - _XML_
