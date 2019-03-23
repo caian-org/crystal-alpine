@@ -51,7 +51,7 @@ FROM caian/crystal:0.27.2-alpine AS build
 COPY . /src
 WORKDIR /src
 RUN shards install
-RUN crystal build app.cr -o app
+RUN crystal build --release --static app.cr -o app
 
 FROM scratch AS run
 COPY --from=build /src/app /app
