@@ -2,13 +2,25 @@
 
 <a href="https://crystal-lang.org" target="_blank"><img src="https://crystal-lang.org/assets/media/crystal_logo-stacked_version.svg" alt="img" height="210px" align="right"/></a>
 
-- Lorem
-- Ipsum
-- Sit
-- Dolor
-- Amet
+The Crystal compiler, the Shards package manager and various complementary
+development headers on top of Alpine Linux.
 
 [![Build Status][travis-shield]][travis-url] [![GitHub tag][tag-shield]][tag-url]
+
+- Build essential packages
+- Development headers for:
+    - GNU C
+    - ZLib
+    - OpenSSL
+    - ReadLine
+    - GNU GMP
+    - YAML
+    - XML
+- Crystal compiler (version `0.27.2`)
+- Shards (version `0.8.1`)
+
+---
+
 
 [travis-shield]: https://img.shields.io/travis/caian-org/crystal-alpine.svg?style=for-the-badge
 [travis-url]: https://travis-ci.org/caian-org/crystal-alpine
